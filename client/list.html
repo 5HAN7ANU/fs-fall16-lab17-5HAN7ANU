@@ -1,0 +1,38 @@
+<div class="wrapper">
+    <center>
+        <div class="static">
+            <div class="page-header">
+                <h1>Chirper!</h1>
+            </div>
+            <p></p>
+            <p></p>
+            <div class="form-group">
+                <select class="form-control" id="user-list" ng-model="newChirp.id">
+                    <option value="">Select User</option>
+                    <option ng-repeat="user in users" value="{{ user.id }}">
+                        {{ user.name }}
+                    </option>
+                </select>
+            </div>
+            <p></p>
+            <p></p>
+            <input id="chirpBox" ng-model="chirpMessage">
+            <input type="button" value="Chirp!" id="chirpButton" ng-click="submitChirp()"/>
+            <p></p>
+            <p></p>
+        </div>
+    </center>
+    <div class="content">
+        <center>
+            <div class="list-group">
+                <div ng-repeat="chirp in chirps">
+                <p></p>
+                <a ng-href="#/chirps/{{ chirp.id }}">
+                    <div class="list-group-item">
+                        {{ chirp.timestamp | date: 'short' }} // {{ chirp.name }} : {{ chirp.message }}
+                    </div>
+                </a>
+            </div>
+        </center>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+<!--<p></p>
+<p></p>
+<center>
+    <div class="list-group"></div>
+    <button type="button" id="editButton">Edit</button>
+    <button type="button" id="deleteButton">Delete</button>
+</center>-->
+
+<div id="chirp-container">
+    <h3>{{ chirp.message }}</h3>
+    <h4>{{ chirp.name }}</h4>
+    <button ng-click="goToUpdate()">Edit</button>
+    <button ng-click="promptDelete()">Delete</button>
+</div>
